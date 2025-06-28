@@ -38,7 +38,7 @@ Upload your real AI conversations. **100% local processing** - we literally cann
 ### 🔬 **VERIFY MODE** 
 Don't trust us - audit our privacy claims yourself with one-click verification tools.
 
-[**🚀 TRY THE LIVE DEMO**](https://your-demo-url.com) | [**📖 READ THE DOCS**](./docs/) | [**🔍 VERIFY PRIVACY**](./PRIVACY.md)
+[**🚀 TRY THE LIVE DEMO**](https://[your-demo-url.com](https://c42-os-770800897695.us-west1.run.app/)) | [**📖 READ THE DOCS**](./docs/) | [**🔍 VERIFY PRIVACY**](./PRIVACY.md)
 
 ---
 
