@@ -183,7 +183,7 @@ Amplifying the neurodivergent superpower of seeing connections. Visual patterns,
 **We plan to open-source components as the project matures** and funding is secured.
 
 **Want to get involved?** 
-- 📧 Email: c42os@yourdomain.com
+- 📧 Email: c42os@c42os.com
 - 💬 Discussions: [GitHub Discussions](./discussions)
 - 🐛 Issues: [Report bugs and feature requests](./issues)
 - 📖 Docs: [Help improve documentation](./docs)
