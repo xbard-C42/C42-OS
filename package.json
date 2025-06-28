@@ -1,0 +1,93 @@
+{
+  "name": "c42-os-checkpoint1",
+  "version": "1.0.0-checkpoint1",
+  "description": "C42 OS - Computing for Collaborative Consciousness",
+  "private": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "author": {
+    "name": "Your Name",
+    "email": "hello@c42os.com",
+    "url": "https://c42os.com"
+  },
+  "repository": {
+    "type": "git", 
+    "url": "https://github.com/yourusername/c42-os-checkpoint1.git"
+  },
+  "homepage": "https://c42os.com",
+  "bugs": {
+    "url": "https://github.com/yourusername/c42-os-checkpoint1/issues"
+  },
+  "keywords": [
+    "consciousness",
+    "privacy",
+    "neurodivergent",
+    "collaboration", 
+    "pattern-recognition",
+    "ai",
+    "operating-system",
+    "interface",
+    "cognitive-amplification",
+    "anti-rivalry",
+    "transparency",
+    "local-first",
+    "privacy-first"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start", 
+    "demo": "npm run dev",
+    "experience-the-future": "npm run dev",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "privacy-audit": "node scripts/privacy-audit.js",
+    "verify-privacy": "npm run privacy-audit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "setup": "node scripts/setup.js",
+    "build-demo": "node scripts/build-demo.js",
+    "validate": "npm run type-check && npm run lint && npm run test",
+    "release": "npm run validate && npm run build"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "lucide-react": "^0.263.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0",
+    "tailwindcss": "^3.3.0",
+    "@tailwindcss/forms": "^0.5.6",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "jest": "^29.0.0",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/jest-dom": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
