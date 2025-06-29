@@ -7,7 +7,7 @@
 
 [![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/Version-1.0.0--checkpoint1-blue.svg)]()
-[![Demo](https://img.shields.io/badge/Demo-Live-green.svg)]([https://c42-os-770800897695.us-west1.run.app/])
+[![Demo][https://c42-os-770800897695.us-west1.run.app/]
 
 ---
 
