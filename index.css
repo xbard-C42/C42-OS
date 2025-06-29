@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@700&display=swap');
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom plugin utility from tailwind.config.js: .neuro-friendly */
+.neuro-friendly {
+    transition: all 0.2s ease-in-out;
+}
+.neuro-friendly:hover {
+    transform: translateY(-1px);
+}
+
+/* Custom plugin utility from tailwind.config.js: .focus-visible-only */
+.focus-visible-only:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+}
+.focus-visible-only:focus-visible {
+    outline: 3px solid #8B5CF6;
+    outline-offset: 2px;
+}
+
+/* Basic form styles from @tailwindcss/forms */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    background-image: none;
+}

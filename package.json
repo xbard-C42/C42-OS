@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git", 
-    "url": "https://github.com/yourusername/c42-os-checkpoint1.git"
+    "url": "https://github.com/xbard-C42/c42-os-checkpoint1.git"
   },
   "homepage": "https://c42os.com",
   "bugs": {
-    "url": "https://github.com/yourusername/c42-os-checkpoint1/issues"
+    "url": "https://github.com/xbard-C42/c42-os-checkpoint1/issues"
   },
   "keywords": [
     "consciousness",

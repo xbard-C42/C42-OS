@@ -38,7 +38,7 @@ Upload your real AI conversations. **100% local processing** - we literally cann
 ### 🔬 **VERIFY MODE** 
 Don't trust us - audit our privacy claims yourself with one-click verification tools.
 
-[**🚀 TRY THE LIVE DEMO**]([https://c42-os-770800897695.us-west1.run.app/]) | [**📖 READ THE DOCS**](./docs/) | [**🔍 VERIFY PRIVACY**](./PRIVACY.md)
+[**🚀 TRY THE LIVE DEMO**](https://your-demo-url.com) | [**📖 READ THE DOCS**](./docs/) | [**🔍 VERIFY PRIVACY**](./PRIVACY.md)
 
 ---
 
@@ -81,7 +81,7 @@ This isn't "accessibility." This is **cognitive amplification.**
 
 ```bash
 # Clone the revolution
-git clone https://github.com/yourusername/c42-os-checkpoint1.git
+git clone https://github.com/xbard-C42/c42-os-checkpoint1.git
 cd c42-os-checkpoint1
 
 # Install dependencies (all privacy-audited)

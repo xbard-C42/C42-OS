@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community AI Response</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-transparent text-gray-900 dark:text-gray-100 p-4">
+    <div id="container" class="space-y-4">
+        <div>
+            <p class="text-sm font-medium text-indigo-600 dark:text-indigo-400">Received Topic:</p>
+            <p id="topic" class="font-semibold text-gray-800 dark:text-gray-200"></p>
+        </div>
+        <div>
+            <p class="text-sm font-medium text-indigo-600 dark:text-indigo-400">Generated Response:</p>
+            <div id="response" class="mt-1 text-gray-700 dark:text-gray-300 min-h-[100px] prose prose-sm dark:prose-invert max-w-none">
+                <div id="loading" class="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
+                    <svg class="animate-spin h-4 w-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>Requesting response from C42 OS Kernel...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+             theme: {
+                extend: {
+                    typography: ({ theme }) => ({
+                        DEFAULT: {
+                           css: {
+                               '--tw-prose-body': theme('colors.gray[700]'),
+                               '--tw-prose-invert-body': theme('colors.gray[300]'),
+                           }
+                        }
+                    })
+                }
+            }
+        }
+
+        const topicEl = document.getElementById('topic');
+        const responseEl = document.getElementById('response');
+        const loadingEl = document.getElementById('loading');
+
+        function setInitialTopic(topic) {
+             if (topicEl) {
+                topicEl.textContent = `"${topic}"`;
+            }
+        }
+
+        function renderResponse(text) {
+            if(loadingEl) loadingEl.style.display = 'none';
+            if(responseEl) {
+                const contentDiv = document.createElement('div');
+                contentDiv.textContent = text;
+                responseEl.innerHTML = '';
+                responseEl.appendChild(contentDiv);
+            }
+        }
+
+        function renderError(error) {
+            if(loadingEl) loadingEl.style.display = 'none';
+            if(responseEl) {
+                responseEl.innerHTML = `<p class="text-red-500 font-medium">Error: ${error}</p>`;
+            }
+        }
+        
+        async function initializeWithSDK(sdk) {
+            console.log('C42 SDK v2.0 Detected. Initializing...');
+            const urlParams = new URLSearchParams(window.location.search);
+            const topic = urlParams.get('topic');
+            
+            sdk.subscribe('theme_change', newTheme => {
+                document.documentElement.classList.toggle('dark', newTheme === 'dark');
+            });
+
+            sdk.subscribe('language_change', newLang => {
+                // In a real app, you might fetch new translations here
+                console.log(`Language changed to ${newLang}`);
+            });
+
+            if (topic) {
+                setInitialTopic(topic);
+                try {
+                    const response = await sdk.request('generate_response', { topic });
+                    renderResponse(response.text);
+                } catch (error) {
+                    renderError(error);
+                }
+            } else {
+                 renderError('No topic provided by the host OS.');
+            }
+        }
+
+        function initializeStandalone() {
+            console.warn('C42 SDK not found. Running in standalone mode.');
+            const urlParams = new URLSearchParams(window.location.search);
+            const topic = urlParams.get('topic') || 'No topic provided';
+            const theme = urlParams.get('theme') || 'light';
+            
+            document.documentElement.classList.toggle('dark', theme === 'dark');
+            setInitialTopic(topic);
+            renderError('Cannot request AI response without C42 OS host.');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            // SDK injection is now synchronous, but a small delay can prevent race conditions.
+            setTimeout(() => {
+                if (window.C42_SDK) {
+                    initializeWithSDK(window.C42_SDK);
+                } else {
+                    // This fallback is for when the iframe is loaded outside the OS
+                    // It can see the parent, but there's no SDK on it.
+                    initializeStandalone();
+                }
+            }, 50);
+        });
+
+        // The Kernel now initiates all communication, so the client doesn't need its own message listener
+        // The SDK's request method handles responses internally.
+    </script>
+</body>
+</html>

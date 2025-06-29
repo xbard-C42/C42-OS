@@ -1,0 +1,8 @@
+{
+  "name": "Copy of C42 OS",
+  "description": "An operating system for collaborative consciousness.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "prompt": ""
+}

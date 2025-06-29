@@ -161,7 +161,7 @@ This isn't "accessibility." This is **cognitive amplification.**
 
 ```bash
 # Clone the revolution
-git clone https://github.com/yourusername/c42-os-checkpoint1.git
+git clone https://github.com/xbard-C42/c42-os-checkpoint1.git
 cd c42-os-checkpoint1
 
 # Install dependencies (all privacy-audited)
@@ -963,11 +963,11 @@ module.exports = {
   },
   "repository": {
     "type": "git", 
-    "url": "https://github.com/yourusername/c42-os-checkpoint1.git"
+    "url": "https://github.com/xbard-C42/c42-os-checkpoint1.git"
   },
   "homepage": "https://c42os.com",
   "bugs": {
-    "url": "https://github.com/yourusername/c42-os-checkpoint1/issues"
+    "url": "https://github.com/xbard-C42/c42-os-checkpoint1/issues"
   },
   "keywords": [
     "consciousness",
@@ -1129,7 +1129,7 @@ This isn't "accessibility." This is **cognitive amplification.**
 
 ```bash
 # Clone the revolution
-git clone https://github.com/yourusername/c42-os-checkpoint1.git
+git clone https://github.com/xbard-C42/c42-os-checkpoint1.git
 cd c42-os-checkpoint1
 
 # Install dependencies (all privacy-audited)
@@ -1347,11 +1347,11 @@ contribution to humanity.
   },
   "repository": {
     "type": "git", 
-    "url": "https://github.com/yourusername/c42-os-checkpoint1.git"
+    "url": "https://github.com/xbard-C42/c42-os-checkpoint1.git"
   },
   "homepage": "https://c42os.com",
   "bugs": {
-    "url": "https://github.com/yourusername/c42-os-checkpoint1/issues"
+    "url": "https://github.com/xbard-C42/c42-os-checkpoint1/issues"
   },
   "keywords": [
     "consciousness",

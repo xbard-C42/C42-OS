@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C42 OS - Collaborative Consciousness</title>
+    <meta name="description" content="An operating system for collaborative consciousness.">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'c42': {
+                'primary': '#764ba2', // New Unified Purple
+                'secondary': '#06B6D4', // Cyan
+                'accent': '#10B981', // Emerald
+                'danger': '#EF4444', // Red
+                'gradient-start': '#667eea', // New Unified Gradient
+                'gradient-end': '#764ba2',
+              },
+              'c42-dark-bg': '#030712',
+              'c42-dark-card': '#111827',
+              'c42-text-dark-primary': 'rgba(255, 255, 255, 0.95)',
+              'c42-text-dark-secondary': 'rgba(255, 255, 255, 0.75)',
+              'neuro': {
+                'calm': '#F0F9FF', // Light blue
+                'focus': '#EDE9FE', // Light purple
+                'success': '#ECFDF5', // Light green
+                'warning': '#FFFBEB', // Light yellow
+                'muted': '#F9FAFB', // Light gray
+              }
+            },
+            fontFamily: {
+              'mono': ['JetBrains Mono', 'Consolas', 'Monaco', 'monospace'],
+              'sans': ['Inter', 'system-ui', 'sans-serif'],
+            },
+            spacing: {
+              '18': '4.5rem',
+              '22': '5.5rem',
+            },
+            ringWidth: {
+              'focus': '3px',
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'fade-in': 'fadeIn 0.5s ease-in-out',
+            },
+            keyframes: {
+                fadeIn: {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' },
+                }
+            }
+          }
+        }
+      }
+    </script>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.378.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.7.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
