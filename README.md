@@ -5,7 +5,7 @@
 # C42 OS - Checkpoint 1 🧠✨
 ## Computing for Collaborative Consciousness
 
-[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg)](LICENSE)
+[![License: Proprietary][https://github.com/xbard-C42/C42-OS/blob/main/LICENSE](LICENSE)
 [![Version](https://img.shields.io/badge/Version-1.0.0--checkpoint1-blue.svg)]()
 [![Demo][https://c42-os-770800897695.us-west1.run.app/]
 
